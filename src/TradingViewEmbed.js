@@ -51,13 +51,6 @@ function buildHtml(widgetType, script=null, id=null, copyrightLink=true) {
   baseHtml += `<div class="tradingview-widget-container">`;
   baseHtml += id ? `<div id="${id}"></div>` : "";
   baseHtml += '<div class="tradingview-widget-container__widget"></div>';
-  baseHtml += copyrightLink ? (
-    `<div class="tradingview-widget-copyright">
-      <a href="${WIDGET_LINKS[widgetType][1]}" rel="noopener" target="_blank">
-        <span class="blue-text">${WIDGET_LINKS[widgetType][0]}</span>
-      </a> by TradingView
-    </div>`
-  ) : ("");
   baseHtml += `<script type="text/javascript" src="${WIDGETS_URLS[widgetType]}" async>`;
   baseHtml += script ? `${script}</script></div>` : "</script></div>";
   baseHtml += "<!-- TradingView Widget END -->";
